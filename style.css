@@ -229,7 +229,7 @@ nav {
 .hero-content {
   position: relative;
   z-index: 2;
-  padding-top: 100px;
+  padding-top: 76px;
   padding-bottom: 40px;
 }
 
@@ -239,7 +239,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 76px;
 }
 
 .hero-visual-inner {
@@ -290,28 +290,6 @@ nav {
 .hero-tire-spoke:nth-child(3) { transform: translate(-50%, -50%) rotate(72deg); }
 .hero-tire-spoke:nth-child(4) { transform: translate(-50%, -50%) rotate(108deg); }
 .hero-tire-spoke:nth-child(5) { transform: translate(-50%, -50%) rotate(144deg); }
-
-.hero-tire-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: rgba(240, 165, 0, 0.1);
-  border: 3px solid rgba(240, 165, 0, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: counterSpin 30s linear infinite;
-}
-.hero-tire-center span {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 18px;
-  color: var(--accent);
-  letter-spacing: 1px;
-}
 
 .hero-floating-badge {
   position: absolute;
@@ -376,13 +354,12 @@ nav {
 
 .hero h1 {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(56px, 9vw, 110px);
-  line-height: 0.95;
+  font-size: clamp(44px, 5.5vw, 78px);
+  line-height: 1.05;
   color: white;
   letter-spacing: 3px;
   animation: fadeUp 0.8s ease 0.2s forwards;
   opacity: 0;
-  max-width: 900px;
 }
 .hero h1 .accent { color: var(--accent); }
 .hero h1 .outline {
