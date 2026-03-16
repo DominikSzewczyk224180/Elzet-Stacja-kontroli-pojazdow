@@ -30,7 +30,7 @@ body {
 }
 
 /* ====== UTILITY ====== */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.container { max-width: 1320px; margin: 0 auto; padding: 0 40px; }
 
 /* ====== ANIMATIONS ====== */
 @keyframes fadeUp {
@@ -251,12 +251,13 @@ nav {
 
 .hero h1 {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(52px, 8vw, 96px);
+  font-size: clamp(56px, 9vw, 110px);
   line-height: 0.95;
   color: white;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   animation: fadeUp 0.8s ease 0.2s forwards;
   opacity: 0;
+  max-width: 900px;
 }
 .hero h1 .accent { color: var(--accent); }
 .hero h1 .outline {
@@ -269,7 +270,7 @@ nav {
   font-size: 20px;
   color: var(--gray-200);
   margin-top: 24px;
-  max-width: 520px;
+  max-width: 640px;
   line-height: 1.6;
   font-weight: 300;
   animation: fadeUp 0.8s ease 0.4s forwards;
@@ -343,7 +344,7 @@ nav {
 /* Hero stats bar */
 .hero-stats {
   display: flex;
-  gap: 48px;
+  gap: 64px;
   margin-top: 64px;
   padding-top: 32px;
   border-top: 1px solid rgba(91, 181, 240, 0.12);
@@ -352,7 +353,7 @@ nav {
 }
 .hero-stat-num {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 48px;
+  font-size: 54px;
   color: var(--accent);
   line-height: 1;
 }
