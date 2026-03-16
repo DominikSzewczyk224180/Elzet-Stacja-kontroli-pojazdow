@@ -229,7 +229,7 @@ nav {
 .hero-content {
   position: relative;
   z-index: 2;
-  padding-top: 76px;
+  padding-top: 24px;
   padding-bottom: 40px;
 }
 
@@ -239,7 +239,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 76px;
+  padding-top: 24px;
 }
 
 .hero-visual-inner {
@@ -340,7 +340,7 @@ nav {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   animation: fadeUp 0.8s ease forwards;
 }
 .hero-badge::before {
@@ -354,12 +354,13 @@ nav {
 
 .hero h1 {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(44px, 5.5vw, 78px);
-  line-height: 1.05;
+  font-size: clamp(38px, 4.8vw, 72px);
+  line-height: 1.1;
   color: white;
   letter-spacing: 3px;
   animation: fadeUp 0.8s ease 0.2s forwards;
   opacity: 0;
+  white-space: nowrap;
 }
 .hero h1 .accent { color: var(--accent); }
 .hero h1 .outline {
@@ -1014,7 +1015,7 @@ footer p {
 }
 
 @media (max-width: 500px) {
-  .hero h1 { font-size: 44px; }
+  .hero h1 { font-size: 36px; white-space: normal; }
   section { padding: 64px 0; }
   .hero-cta { flex-direction: column; }
   .btn-primary, .btn-secondary { text-align: center; justify-content: center; }
