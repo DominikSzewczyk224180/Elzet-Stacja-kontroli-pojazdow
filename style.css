@@ -580,7 +580,7 @@ section { padding: 110px 0; }
 
 /* ====== REVIEWS ====== */
 .reviews {
-  background: #fafbfd;
+  background: #ffffff;
   position: relative;
 }
 
@@ -710,7 +710,9 @@ section { padding: 110px 0; }
 
 /* ====== LOCATIONS ====== */
 .locations {
-  background: linear-gradient(180deg, #f8f9fb 0%, #f0f4f9 100%);
+  background: linear-gradient(180deg, #e8eef5 0%, #d8e2ed 100%);
+  position: relative;
+  border-top: 1px solid #d0dce8;
 }
 
 .locations-grid {
