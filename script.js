@@ -1,7 +1,7 @@
-// Header scroll effect (subtle)
+// Header scroll effect
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 60);
+  header.classList.toggle('scrolled', window.scrollY > 30);
 });
 
 // Mobile menu
@@ -28,7 +28,7 @@ function closeMobile() {
   spans[2].style.transform = '';
 }
 
-// Scroll reveal (subtle fade-up)
+// Scroll reveal
 const reveals = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -40,7 +40,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
 reveals.forEach(el => revealObserver.observe(el));
 
-// Highlight today in hours rows for both locations
+// Highlight today in hours for both locations
 const today = new Date().getDay(); // 0=Sun, 1-5=Mon-Fri, 6=Sat
 document.querySelectorAll('.location-hours-row').forEach(row => {
   const day = row.dataset.day;
@@ -48,7 +48,7 @@ document.querySelectorAll('.location-hours-row').forEach(row => {
   else if (day === String(today)) row.classList.add('today');
 });
 
-// Smooth scroll with offset for sticky header
+// Smooth scroll with header offset
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', function(e) {
     const href = this.getAttribute('href');
@@ -56,7 +56,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
-      const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 70;
+      const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 80;
       window.scrollTo({ top: offsetTop, behavior: 'smooth' });
     }
   });

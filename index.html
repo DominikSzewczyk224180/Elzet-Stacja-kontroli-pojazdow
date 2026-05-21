@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ELZET s.c. — Stacja Kontroli Pojazdów i Serwis Ogumienia | Pszów i Rybnik</title>
-<meta name="description" content="ELZET — profesjonalna stacja kontroli pojazdów i serwis ogumienia. Dwie lokalizacje: Pszów i Rybnik. Przegląd techniczny, wymiana opon, obsługa klimatyzacji.">
+<meta name="description" content="ELZET — profesjonalna stacja kontroli pojazdów i serwis ogumienia. Dwie lokalizacje: Pszów i Rybnik. Przegląd techniczny, wymiana opon, naprawa kół, obsługa klimatyzacji.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,16 +26,10 @@
       <li><a href="#kontakt">Kontakt</a></li>
     </ul>
 
-    <div class="nav-phone-group">
-      <a href="tel:324558648" class="nav-phone">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <small>Pszów</small>32 455 86 48
-      </a>
-      <a href="tel:323078283" class="nav-phone">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <small>Rybnik</small>32 307 82 83
-      </a>
-    </div>
+    <a href="#lokalizacje" class="nav-cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Kontakt
+    </a>
 
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -50,12 +44,22 @@
   <a href="#kontakt" class="menu-link" onclick="closeMobile()">Kontakt</a>
   <div class="mobile-phones">
     <a href="tel:324558648" class="mobile-phone" onclick="closeMobile()">
-      <small>Pszów</small>
-      <span class="num">32 455 86 48</span>
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </div>
+      <div>
+        <small>Pszów</small>
+        <span class="num">32 455 86 48</span>
+      </div>
     </a>
     <a href="tel:323078283" class="mobile-phone" onclick="closeMobile()">
-      <small>Rybnik</small>
-      <span class="num">32 307 82 83</span>
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </div>
+      <div>
+        <small>Rybnik</small>
+        <span class="num">32 307 82 83</span>
+      </div>
     </a>
   </div>
 </div>
@@ -64,53 +68,46 @@
 <section class="hero">
   <div class="container">
     <div class="hero-content">
-      <div class="hero-meta">
-        <span class="hero-meta-code">EST. 2004</span>
-        <span class="hero-meta-line"></span>
-        <span class="hero-meta-label">Pszów · Rybnik</span>
-      </div>
+      <div class="hero-overline">Zaufany serwis od 2004 roku</div>
 
       <h1>
-        STACJA KONTROLI POJAZDÓW<br>
-        I SERWIS OGUMIENIA
+        Stacja kontroli pojazdów<br>
+        i serwis ogumienia
       </h1>
-
-      <div class="hero-rule"></div>
 
       <p class="hero-desc">
         Profesjonalny przegląd techniczny, wymiana opon, naprawa kół i obsługa klimatyzacji.
         Działamy w Pszowie i Rybniku od ponad 20 lat.
       </p>
 
-      <div class="hero-actions">
-        <a href="tel:324558648" class="btn-call">
-          <span class="btn-call-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </span>
-          <span class="btn-call-text">
-            <span class="btn-call-label">Pszów</span>
-            <span class="btn-call-number">32 455 86 48</span>
-          </span>
+      <div class="hero-phones">
+        <a href="tel:324558648" class="hero-phone">
+          <div class="phone-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="phone-text">
+            <span class="phone-city">Pszów</span>
+            <span class="phone-number">32 455 86 48</span>
+          </div>
         </a>
-        <a href="tel:323078283" class="btn-call secondary">
-          <span class="btn-call-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </span>
-          <span class="btn-call-text">
-            <span class="btn-call-label">Rybnik</span>
-            <span class="btn-call-number">32 307 82 83</span>
-          </span>
+        <a href="tel:323078283" class="hero-phone">
+          <div class="phone-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="phone-text">
+            <span class="phone-city">Rybnik</span>
+            <span class="phone-number">32 307 82 83</span>
+          </div>
         </a>
       </div>
     </div>
 
-    <!-- Hero visual: clean logo with industrial corner brackets -->
     <div class="hero-visual">
-      <div class="hero-visual-frame">
+      <div class="hero-visual-card">
         <img src="logo.png" alt="ELZET s.c.">
-        <div class="hero-visual-meta">
-          <span class="label">— Spółka cywilna</span>
-          <span class="value">EL · ZT</span>
+        <div class="visual-tagline">
+          <span>Spółka cywilna</span>
+          <strong>od 2004 r.</strong>
         </div>
       </div>
     </div>
@@ -121,18 +118,13 @@
 <section class="services" id="uslugi">
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-meta">
-        <span class="section-code">01 / 04</span>
-        <span class="section-meta-line"></span>
-        <span class="section-label">Nasze usługi</span>
-      </div>
+      <div class="section-label">Nasze usługi</div>
       <h2 class="section-title">Pełen zakres usług motoryzacyjnych</h2>
       <p class="section-subtitle">Świadczymy kompleksowe usługi z zakresu kontroli pojazdów, opon, kół oraz klimatyzacji w naszych dwóch lokalizacjach.</p>
     </div>
 
     <div class="services-grid">
       <div class="service-card reveal reveal-d-1">
-        <span class="service-num">01 — SKP</span>
         <div class="service-icon">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 11l3 3L22 4"/>
@@ -140,11 +132,10 @@
           </svg>
         </div>
         <h3>Przegląd techniczny</h3>
-        <p>Badanie techniczne pojazdów osobowych, dostawczych i motocykli. Profesjonalna stacja kontroli z pełnym wyposażeniem diagnostycznym.</p>
+        <p>Badanie techniczne pojazdów osobowych, dostawczych i motocykli na profesjonalnej stacji z pełnym wyposażeniem diagnostycznym.</p>
       </div>
 
       <div class="service-card reveal reveal-d-2">
-        <span class="service-num">02 — OPONY</span>
         <div class="service-icon">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"/>
@@ -160,7 +151,6 @@
       </div>
 
       <div class="service-card reveal reveal-d-3">
-        <span class="service-num">03 — KOŁA</span>
         <div class="service-icon">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
@@ -171,7 +161,6 @@
       </div>
 
       <div class="service-card reveal reveal-d-4">
-        <span class="service-num">04 — KLIMA</span>
         <div class="service-icon">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
@@ -188,45 +177,37 @@
 <section class="why-us" id="dlaczego">
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-meta">
-        <span class="section-code">02 / 04</span>
-        <span class="section-meta-line"></span>
-        <span class="section-label">Dlaczego ELZET</span>
-      </div>
+      <div class="section-label">Dlaczego ELZET</div>
       <h2 class="section-title">Ponad 20 lat zaufania klientów</h2>
       <p class="section-subtitle">Co wyróżnia nas spośród innych warsztatów na Śląsku.</p>
     </div>
 
     <div class="why-grid">
       <div class="why-card reveal reveal-d-1">
-        <span class="why-num">01 — STAŻ</span>
         <div class="why-icon">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
         </div>
         <h3>Doświadczenie od 2004</h3>
-        <p>Działamy nieprzerwanie od 2004 roku. Ponad 20 lat na rynku motoryzacyjnym i tysiące zadowolonych klientów.</p>
+        <p>Działamy nieprzerwanie od 2004 roku. Ponad 20 lat na rynku i tysiące zadowolonych klientów.</p>
       </div>
 
       <div class="why-card reveal reveal-d-2">
-        <span class="why-num">02 — ZASIĘG</span>
         <div class="why-icon">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <h3>Dwie lokalizacje</h3>
-        <p>Zapraszamy do naszych zakładów w Pszowie i Rybniku. Wybierz wygodniejszą lokalizację, bliżej niż myślisz.</p>
+        <p>Zapraszamy do naszych zakładów w Pszowie i Rybniku. Wybierz wygodniejszą lokalizację.</p>
       </div>
 
       <div class="why-card reveal reveal-d-3">
-        <span class="why-num">03 — CENY</span>
         <div class="why-icon">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         </div>
         <h3>Uczciwe ceny</h3>
-        <p>Żadnych ukrytych kosztów. Jasna wycena przed rozpoczęciem prac i rzetelne podejście do każdego klienta.</p>
+        <p>Żadnych ukrytych kosztów. Jasna wycena przed rozpoczęciem prac i rzetelne podejście.</p>
       </div>
 
       <div class="why-card reveal reveal-d-4">
-        <span class="why-num">04 — CZAS</span>
         <div class="why-icon">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         </div>
@@ -241,11 +222,7 @@
 <section class="locations" id="lokalizacje">
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-meta">
-        <span class="section-code">03 / 04</span>
-        <span class="section-meta-line"></span>
-        <span class="section-label">Nasze lokalizacje</span>
-      </div>
+      <div class="section-label">Nasze lokalizacje</div>
       <h2 class="section-title">Działamy w dwóch miastach</h2>
       <p class="section-subtitle">Odwiedź nas w Pszowie lub Rybniku — wybierz dogodną lokalizację.</p>
     </div>
@@ -254,23 +231,34 @@
       <!-- PSZÓW -->
       <div class="location-card reveal reveal-d-1">
         <div class="location-header">
-          <div class="location-header-top">
-            <span class="location-code">LOC-01</span>
-            <span class="location-tagline">Główna siedziba</span>
+          <div class="location-header-logo">
+            <img src="logo.png" alt="ELZET">
           </div>
-          <div class="location-city">PSZÓW</div>
+          <div class="location-header-text">
+            <div class="city">Pszów</div>
+            <div class="service-tags">Stacja Kontroli Pojazdów<br>Serwis Ogumienia</div>
+          </div>
         </div>
 
         <div class="location-body">
-          <div class="location-info">
-            <div class="location-info-block">
-              <span class="info-label">Adres</span>
-              <div class="info-value">ul. Pszowska 494</div>
-              <div class="info-secondary">44-370 Pszów</div>
+          <div class="location-info-row">
+            <div class="location-info-icon">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
-            <div class="location-info-block">
-              <span class="info-label">Telefon</span>
-              <a href="tel:324558648" class="info-value">32 455 86 48</a>
+            <div class="location-info-text">
+              <span class="label">Telefon</span>
+              <a href="tel:324558648" class="value">32 455 86 48</a>
+            </div>
+          </div>
+
+          <div class="location-info-row">
+            <div class="location-info-icon">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="location-info-text">
+              <span class="label">Adres</span>
+              <span class="value">ul. Pszowska 494</span>
+              <span class="value-secondary">44-370 Pszów</span>
             </div>
           </div>
 
@@ -321,23 +309,34 @@
       <!-- RYBNIK -->
       <div class="location-card reveal reveal-d-2">
         <div class="location-header">
-          <div class="location-header-top">
-            <span class="location-code">LOC-02</span>
-            <span class="location-tagline">Druga lokalizacja</span>
+          <div class="location-header-logo">
+            <img src="logo.png" alt="ELZET">
           </div>
-          <div class="location-city">RYBNIK</div>
+          <div class="location-header-text">
+            <div class="city">Rybnik</div>
+            <div class="service-tags">Stacja Kontroli Pojazdów<br>Serwis Ogumienia</div>
+          </div>
         </div>
 
         <div class="location-body">
-          <div class="location-info">
-            <div class="location-info-block">
-              <span class="info-label">Adres</span>
-              <div class="info-value">ul. Góreckiego 55</div>
-              <div class="info-secondary">44-200 Rybnik</div>
+          <div class="location-info-row">
+            <div class="location-info-icon">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
-            <div class="location-info-block">
-              <span class="info-label">Telefon</span>
-              <a href="tel:323078283" class="info-value">32 307 82 83</a>
+            <div class="location-info-text">
+              <span class="label">Telefon</span>
+              <a href="tel:323078283" class="value">32 307 82 83</a>
+            </div>
+          </div>
+
+          <div class="location-info-row">
+            <div class="location-info-icon">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="location-info-text">
+              <span class="label">Adres</span>
+              <span class="value">ul. Góreckiego 55</span>
+              <span class="value-secondary">44-200 Rybnik</span>
             </div>
           </div>
 
@@ -417,7 +416,7 @@
 
     <div class="footer-bottom">
       <p>© 2024 ELZET s.c. — Wszystkie prawa zastrzeżone</p>
-      <p>EST. 2004 · PSZÓW · RYBNIK</p>
+      <p>Pszów · Rybnik</p>
     </div>
   </div>
 </footer>
