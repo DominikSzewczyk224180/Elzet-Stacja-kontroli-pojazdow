@@ -40,47 +40,25 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 reveals.forEach(el => revealObserver.observe(el));
 
-// Counter animation
-function animateCounters() {
-  document.querySelectorAll('[data-count]').forEach(el => {
-    const target = parseInt(el.dataset.count);
-    const duration = 2000;
-    const start = performance.now();
-
-    function update(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.round(eased * target);
-      
-      if (target >= 1000) {
-        el.textContent = current.toLocaleString('pl-PL') + '+';
-      } else {
-        el.textContent = current + '+';
-      }
-
-      if (progress < 1) requestAnimationFrame(update);
-    }
-    requestAnimationFrame(update);
-  });
-}
-
-// Trigger counters when hero stats visible
-const statsEl = document.querySelector('.hero-stats');
-let countersDone = false;
-const statsObserver = new IntersectionObserver(entries => {
-  if (entries[0].isIntersecting && !countersDone) {
-    countersDone = true;
-    animateCounters();
-    statsObserver.disconnect();
+// Highlight today's hours in both location cards
+const today = new Date().getDay(); // 0 = Sunday, 1-5 = Mon-Fri, 6 = Saturday
+document.querySelectorAll('.location-hours-row').forEach(row => {
+  const day = row.dataset.day;
+  if (day === '1-5' && today >= 1 && today <= 5) {
+    row.classList.add('today');
+  } else if (day === String(today)) {
+    row.classList.add('today');
   }
-}, { threshold: 0.5 });
-statsObserver.observe(statsEl);
+});
 
-// Highlight current day in hours
-const dayIndex = new Date().getDay();
-const dayMap = { 1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 0: 6 };
-const rows = document.querySelectorAll('.hours-row');
-if (rows[dayMap[dayIndex]]) {
-  rows[dayMap[dayIndex]].classList.add('today');
-}
+// Smooth scroll for anchor links with offset for sticky header
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target && this.getAttribute('href').length > 1) {
+      e.preventDefault();
+      const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 70;
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    }
+  });
+});

@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ELZET — Stacja Kontroli Pojazdów | Serwis Opon | Pszów</title>
+<title>ELZET s.c. — Stacja Kontroli Pojazdów i Serwis Ogumienia | Pszów i Rybnik</title>
+<meta name="description" content="ELZET — profesjonalna stacja kontroli pojazdów i serwis ogumienia. Dwie lokalizacje: Pszów i Rybnik. Przegląd techniczny, wymiana opon, obsługa klimatyzacji.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -14,20 +16,19 @@
 <header id="header">
   <nav class="container">
     <a href="#" class="logo">
-      <img src="logo.png" alt="ELZET" class="logo-img">
+      <img src="logo.png" alt="ELZET s.c." class="logo-img">
     </a>
 
     <ul class="nav-links">
       <li><a href="#uslugi">Usługi</a></li>
       <li><a href="#dlaczego">Dlaczego my</a></li>
-      <li><a href="#cennik">Cennik</a></li>
-      <li><a href="#opinie">Opinie</a></li>
+      <li><a href="#lokalizacje">Lokalizacje</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
     </ul>
 
-    <a href="tel:324558648" class="nav-phone">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-      32 455 86 48
+    <a href="#lokalizacje" class="nav-cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Kontakt
     </a>
 
     <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -39,13 +40,22 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="#uslugi" onclick="closeMobile()">Usługi</a>
   <a href="#dlaczego" onclick="closeMobile()">Dlaczego my</a>
-  <a href="#cennik" onclick="closeMobile()">Cennik</a>
-  <a href="#opinie" onclick="closeMobile()">Opinie</a>
+  <a href="#lokalizacje" onclick="closeMobile()">Lokalizacje</a>
   <a href="#kontakt" onclick="closeMobile()">Kontakt</a>
-  <a href="tel:324558648" class="mobile-phone" onclick="closeMobile()">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-    32 455 86 48
-  </a>
+  <div class="mobile-phones">
+    <a href="tel:324558648" class="mobile-phone" onclick="closeMobile()">
+      <div class="mobile-phone-block">
+        <small>Pszów</small><br>
+        32 455 86 48
+      </div>
+    </a>
+    <a href="tel:323078283" class="mobile-phone" onclick="closeMobile()">
+      <div class="mobile-phone-block">
+        <small>Rybnik</small><br>
+        32 307 82 83
+      </div>
+    </a>
+  </div>
 </div>
 
 <!-- ====== HERO ====== -->
@@ -53,93 +63,110 @@
   <div class="container">
     <div class="hero-content">
       <div class="hero-badge">Zaufany serwis od 2004 roku</div>
-    <h1>
-      STACJA KONTROLI <span class="accent">POJAZDÓW</span><br>
-      <span class="outline">I SERWIS OPON</span>
-    </h1>
-    <p class="hero-subtitle">
-      Profesjonalny przegląd techniczny, wymiana opon i pełen serwis opon. 
-      Ponad 20 lat doświadczenia w Pszowie — zaufaj ekspertom.
-    </p>
-    <div class="hero-cta">
-      <a href="tel:324558648" class="btn-primary">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-        Zadzwoń teraz
-      </a>
-      <a href="#uslugi" class="btn-secondary">
-        Sprawdź ofertę
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-      </a>
+      <h1>
+        STACJA KONTROLI <span class="accent">POJAZDÓW</span><br>
+        <span class="outline">I SERWIS OGUMIENIA</span>
+      </h1>
+      <p class="hero-subtitle">
+        Profesjonalny przegląd techniczny, wymiana opon, naprawa kół i obsługa klimatyzacji.
+        Dwie lokalizacje na Śląsku — w Pszowie i Rybniku.
+      </p>
+      <div class="hero-cta">
+        <a href="#lokalizacje" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Znajdź lokalizację
+        </a>
+        <a href="#uslugi" class="btn-secondary">
+          Nasze usługi
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-cities">
+        <div class="hero-city">
+          <div class="hero-city-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="hero-city-info">
+            <strong>PSZÓW</strong>
+            <span>32 455 86 48</span>
+          </div>
+        </div>
+        <div class="hero-city">
+          <div class="hero-city-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="hero-city-info">
+            <strong>RYBNIK</strong>
+            <span>32 307 82 83</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="hero-stats">
-      <div>
-        <div class="hero-stat-num" data-count="20">0</div>
-        <div class="hero-stat-label">Lat doświadczenia</div>
-      </div>
-      <div>
-        <div class="hero-stat-num" data-count="356">0</div>
-        <div class="hero-stat-label">Opinii Google ★ 4.9</div>
-      </div>
-      <div>
-        <div class="hero-stat-num" data-count="15000">0</div>
-        <div class="hero-stat-label">Zadowolonych klientów</div>
-      </div>
-    </div>
-    </div>
-
-    <!-- Hero visual column -->
+    <!-- Hero visual: big logo display with orbital decorations -->
     <div class="hero-visual">
       <div class="hero-visual-inner">
-        <div class="hero-tire">
-          <div class="hero-tire-spoke"></div>
-          <div class="hero-tire-spoke"></div>
-          <div class="hero-tire-spoke"></div>
-          <div class="hero-tire-spoke"></div>
-          <div class="hero-tire-spoke"></div>
+        <div class="hero-orbit hero-orbit-1"></div>
+        <div class="hero-orbit hero-orbit-2"></div>
+        <div class="hero-orbit hero-orbit-3"></div>
+
+        <div class="hero-logo-display">
+          <img src="logo.png" alt="ELZET s.c.">
         </div>
 
         <div class="hero-floating-badge top-right">
-          <div class="badge-icon gold">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <div class="badge-icon orange">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
-          <div class="badge-text"><strong>4.9 / 5.0</strong>356 opinii Google</div>
+          <div class="badge-text">
+            <strong>Od 2004 r.</strong>
+            20+ lat doświadczenia
+          </div>
         </div>
 
         <div class="hero-floating-badge bottom-left">
           <div class="badge-icon blue">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--blue-light)" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
-          <div class="badge-text"><strong>Od 2004 roku</strong>Ponad 20 lat doświadczenia</div>
+          <div class="badge-text">
+            <strong>2 lokalizacje</strong>
+            Pszów i Rybnik
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ====== SERVICES ====== -->
 <section class="services" id="uslugi">
   <div class="container">
-    <div class="reveal">
+    <div class="section-head reveal">
       <div class="section-label">Nasze usługi</div>
-      <div class="section-title">Pełen zakres usług <span class="accent">motoryzacyjnych</span></div>
-      <div class="section-line"></div>
+      <h2 class="section-title">Pełen zakres usług <span class="accent">motoryzacyjnych</span></h2>
+      <p class="section-subtitle">Świadczymy kompleksowe usługi związane z kontrolą pojazdów, oponami i klimatyzacją w naszych dwóch lokalizacjach.</p>
     </div>
 
     <div class="services-grid">
+      <!-- 1. Przegląd techniczny -->
       <div class="service-card reveal reveal-delay-1">
+        <div class="service-num">01</div>
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 11l3 3L22 4"/>
             <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
           </svg>
         </div>
         <h3>Przegląd techniczny</h3>
         <p>Badanie techniczne pojazdów osobowych, dostawczych i motocykli. Profesjonalna stacja kontroli z pełnym wyposażeniem diagnostycznym.</p>
-        <span class="service-price">Umów przegląd →</span>
       </div>
 
+      <!-- 2. Wymiana opon -->
       <div class="service-card reveal reveal-delay-2">
+        <div class="service-num">02</div>
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"/>
             <circle cx="12" cy="12" r="4"/>
             <line x1="12" y1="2" x2="12" y2="6"/>
@@ -150,31 +177,30 @@
         </div>
         <h3>Wymiana opon</h3>
         <p>Sezonowa wymiana opon — letnie, zimowe i całoroczne. Montaż, demontaż i wyważanie kół na nowoczesnym sprzęcie.</p>
-        <span class="service-price">Sprawdź cenę →</span>
       </div>
 
+      <!-- 3. Serwis ogumienia + naprawa kół -->
       <div class="service-card reveal reveal-delay-3">
+        <div class="service-num">03</div>
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="7" width="20" height="14" rx="2"/>
-            <path d="M16 7V5a4 4 0 0 0-8 0v2"/>
-            <circle cx="12" cy="14" r="2"/>
-          </svg>
-        </div>
-        <h3>Serwis opon</h3>
-        <p>Naprawa opon, wulkanizacja, łatanie przebitych opon. Przechowywanie opon sezonowych w naszym magazynie.</p>
-        <span class="service-price">Dowiedz się więcej →</span>
-      </div>
-
-      <div class="service-card reveal reveal-delay-4">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
             <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
           </svg>
         </div>
-        <h3>Diagnostyka i naprawy</h3>
-        <p>Diagnostyka komputerowa silnika, hamulców i zawieszenia. Drobne naprawy mechaniczne i regulacje przed przeglądem.</p>
-        <span class="service-price">Zapytaj o termin →</span>
+        <h3>Serwis ogumienia i naprawa kół</h3>
+        <p>Profesjonalny serwis opon i felg, prostowanie kół, kontrola stanu ogumienia. Przechowywanie opon sezonowych w naszym magazynie.</p>
+      </div>
+
+      <!-- 4. Klimatyzacja (NEW) -->
+      <div class="service-card reveal reveal-delay-4">
+        <div class="service-num">04</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <h3>Obsługa klimatyzacji</h3>
+        <p>Napełnianie klimatyzacji samochodowej oraz odgrzybianie układu klimatyzacji. Zapewnij sobie świeże i czyste powietrze w kabinie.</p>
       </div>
     </div>
   </div>
@@ -183,234 +209,202 @@
 <!-- ====== WHY US ====== -->
 <section class="why-us" id="dlaczego">
   <div class="container">
-    <div class="reveal">
+    <div class="section-head reveal">
       <div class="section-label">Dlaczego ELZET?</div>
-      <div class="section-title">Ponad <span class="accent">20 lat</span> zaufania</div>
-      <div class="section-line"></div>
+      <h2 class="section-title">Ponad <span class="accent">20 lat</span> zaufania klientów</h2>
+      <p class="section-subtitle">Co wyróżnia nas spośród innych warsztatów na Śląsku.</p>
     </div>
 
     <div class="why-grid">
       <div class="why-card reveal reveal-delay-1">
-        <div class="why-num">01</div>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
         <h3>Doświadczenie od 2004</h3>
-        <p>Działamy nieprzerwanie od 2004 roku. Tysiące przeprowadzonych przeglądów i dziesiątki tysięcy wymienionych opon.</p>
+        <p>Działamy nieprzerwanie od 2004 roku. Ponad 20 lat na rynku motoryzacyjnym i tysiące zadowolonych klientów.</p>
       </div>
+
       <div class="why-card reveal reveal-delay-2">
-        <div class="why-num">02</div>
-        <h3>Ocena 4.9 w Google</h3>
-        <p>356 opinii z oceną 4.9/5 mówi samo za siebie. Nasi klienci wracają do nas od lat i polecają nas innym.</p>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Dwie lokalizacje</h3>
+        <p>Zapraszamy do naszych zakładów w Pszowie i Rybniku. Bliżej do nas niż myślisz — wybierz wygodniejszą lokalizację.</p>
       </div>
+
       <div class="why-card reveal reveal-delay-3">
-        <div class="why-num">03</div>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8L8 16"/><path d="M8 8l8 8"/></svg>
+        </div>
         <h3>Uczciwe ceny</h3>
-        <p>Żadnych ukrytych kosztów. Jasny cennik usług, uczciwe podejście do klienta i rzetelna wycena przed rozpoczęciem pracy.</p>
+        <p>Żadnych ukrytych kosztów. Jasna wycena przed rozpoczęciem prac i rzetelne podejście do każdego klienta.</p>
       </div>
+
       <div class="why-card reveal reveal-delay-4">
-        <div class="why-num">04</div>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
         <h3>Szybka realizacja</h3>
-        <p>Przegląd w 30 minut, wymiana opon bez zbędnego czekania. Szanujemy Twój czas — umów się i przyjedź.</p>
+        <p>Przegląd techniczny w 30 minut, wymiana opon bez zbędnego czekania. Szanujemy Twój czas — umów się i przyjedź.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ====== PRICING ====== -->
-<section class="pricing" id="cennik">
+<!-- ====== LOCATIONS ====== -->
+<section class="locations" id="lokalizacje">
   <div class="container">
-    <div class="reveal">
-      <div class="section-label">Cennik</div>
-      <div class="section-title">Przejrzyste ceny, <span class="accent">bez niespodzianek</span></div>
-      <div class="section-line"></div>
+    <div class="section-head reveal">
+      <div class="section-label">Nasze lokalizacje</div>
+      <h2 class="section-title">Działamy w <span class="accent">dwóch</span> miastach</h2>
+      <p class="section-subtitle">Odwiedź nas w Pszowie lub Rybniku — wybierz dogodną lokalizację.</p>
     </div>
 
-    <div class="pricing-grid">
-      <div class="pricing-card reveal reveal-delay-1">
-        <div class="pricing-icon blue">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+    <div class="locations-grid" id="kontakt">
+      <!-- PSZÓW -->
+      <div class="location-card reveal reveal-delay-1">
+        <div class="location-header">
+          <div class="location-city">PSZ<span class="accent">Ó</span>W</div>
+          <div class="location-tagline">Główna siedziba</div>
         </div>
-        <h3>Przegląd techniczny</h3>
-        <p class="price-desc">Pełne badanie techniczne pojazdu zgodnie z wymogami prawa</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Samochody osobowe</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Samochody dostawcze</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Motocykle</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Zaświadczenie od ręki</li>
-        </ul>
-        <a href="tel:324558648" class="btn-price outline">Umów przegląd</a>
-      </div>
 
-      <div class="pricing-card featured reveal reveal-delay-2">
-        <div class="pricing-icon gold">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
-        </div>
-        <h3>Wymiana opon</h3>
-        <p class="price-desc">Kompleksowa wymiana z wyważaniem i przeglądem stanu opon</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Demontaż i montaż 4 kół</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Wyważanie komputerowe</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Kontrola ciśnienia</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Ocena stanu bieżnika</li>
-        </ul>
-        <a href="tel:324558648" class="btn-price filled">Zadzwoń po cenę</a>
-      </div>
-
-      <div class="pricing-card reveal reveal-delay-3">
-        <div class="pricing-icon dark">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-        </div>
-        <h3>Serwis i naprawa</h3>
-        <p class="price-desc">Wulkanizacja, naprawa opon, przechowywanie sezonowe i diagnostyka</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Wulkanizacja opon</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Naprawa przebitych opon</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Przechowywanie opon</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Diagnostyka komputerowa</li>
-        </ul>
-        <a href="tel:324558648" class="btn-price outline">Zapytaj o wycenę</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== REVIEWS ====== -->
-<section class="reviews" id="opinie">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Opinie klientów</div>
-      <div class="section-title">Co mówią o nas <span class="accent">klienci?</span></div>
-      <div class="section-line"></div>
-    </div>
-
-    <div class="reviews-score reveal">
-      <div class="reviews-big-num">4.9</div>
-      <div>
-        <div class="reviews-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <div class="reviews-count">Na podstawie 356 opinii w Google</div>
-      </div>
-    </div>
-
-    <div class="reviews-grid">
-      <div class="review-card reveal reveal-delay-1">
-        <div class="review-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <blockquote>„Profesjonalna obsługa, szybki przegląd i bardzo miła atmosfera. Polecam każdemu — jeżdżę tu od lat i nigdy się nie zawiodłem."</blockquote>
-        <div class="review-author">— Marek K.</div>
-      </div>
-
-      <div class="review-card reveal reveal-delay-2">
-        <div class="review-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <blockquote>„Wymiana opon błyskawicznie i w dobrej cenie. Pan właściciel doradził najlepsze opony na zimę. Będę wracać!"</blockquote>
-        <div class="review-author">— Anna W.</div>
-      </div>
-
-      <div class="review-card reveal reveal-delay-3">
-        <div class="review-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <blockquote>„Uczciwy serwis, bez naciągania. Przegląd techniczny przeszedł bez problemów, a cena jak najbardziej w porządku."</blockquote>
-        <div class="review-author">— Tomasz P.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== CONTACT ====== -->
-<section class="contact" id="kontakt">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Kontakt</div>
-      <div class="section-title">Zapraszamy do <span class="accent">ELZET</span></div>
-      <div class="section-line"></div>
-    </div>
-
-    <div class="contact-grid">
-      <div>
-        <div class="contact-info-item reveal reveal-delay-1">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div class="location-body">
+          <div class="location-info">
+            <div class="location-info-item">
+              <div class="location-info-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="location-info-text">
+                <strong>ul. Pszowska 494</strong>
+                44-370 Pszów
+              </div>
+            </div>
+            <div class="location-info-item">
+              <div class="location-info-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="location-info-text">
+                <a href="tel:324558648">32 455 86 48</a>
+                Telefon
+              </div>
+            </div>
           </div>
-          <div>
-            <h4>Adres</h4>
-            <p>ul. Pszowska 494, 44-370 Pszów</p>
+
+          <div class="location-hours-block">
+            <div class="location-hours-title">
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              Stacja kontroli pojazdów
+            </div>
+            <div class="location-hours-row" data-day="1-5">
+              <span class="day">Poniedziałek — Piątek</span>
+              <span class="time">7:30 — 19:30</span>
+            </div>
+            <div class="location-hours-row" data-day="6">
+              <span class="day">Sobota</span>
+              <span class="time">7:30 — 14:00</span>
+            </div>
+            <div class="location-hours-row" data-day="0">
+              <span class="day">Niedziela</span>
+              <span class="time">Zamknięte</span>
+            </div>
+          </div>
+
+          <div class="location-hours-block">
+            <div class="location-hours-title">
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+              Serwis ogumienia
+            </div>
+            <div class="location-hours-row" data-day="1-5">
+              <span class="day">Poniedziałek — Piątek</span>
+              <span class="time">8:00 — 17:00</span>
+            </div>
+            <div class="location-hours-row" data-day="6">
+              <span class="day">Sobota</span>
+              <span class="time">8:00 — 13:00</span>
+            </div>
+            <div class="location-hours-row" data-day="0">
+              <span class="day">Niedziela</span>
+              <span class="time">Zamknięte</span>
+            </div>
           </div>
         </div>
 
-        <div class="contact-info-item reveal reveal-delay-2">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </div>
-          <div>
-            <h4>Telefon</h4>
-            <a href="tel:324558648">32 455 86 48</a>
-          </div>
-        </div>
-
-        <div class="contact-info-item reveal reveal-delay-3">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div>
-            <h4>NIP / REGON</h4>
-            <p>NIP: 647-233-75-66 | REGON: 278257947</p>
-          </div>
-        </div>
-
-        <div class="contact-hours reveal reveal-delay-4">
-          <h4>Godziny otwarcia</h4>
-          <div class="hours-row">
-            <span class="hours-day">Poniedziałek</span>
-            <span class="hours-time">8:00 — 19:00</span>
-          </div>
-          <div class="hours-row">
-            <span class="hours-day">Wtorek</span>
-            <span class="hours-time">8:00 — 19:00</span>
-          </div>
-          <div class="hours-row">
-            <span class="hours-day">Środa</span>
-            <span class="hours-time">8:00 — 19:00</span>
-          </div>
-          <div class="hours-row">
-            <span class="hours-day">Czwartek</span>
-            <span class="hours-time">8:00 — 19:00</span>
-          </div>
-          <div class="hours-row">
-            <span class="hours-day">Piątek</span>
-            <span class="hours-time">8:00 — 19:00</span>
-          </div>
-          <div class="hours-row">
-            <span class="hours-day">Sobota</span>
-            <span class="hours-time">8:00 — 14:00</span>
-          </div>
-          <div class="hours-row">
-            <span class="hours-day">Niedziela</span>
-            <span class="hours-time">Zamknięte</span>
-          </div>
+        <div class="location-map">
+          <iframe src="https://maps.google.com/maps?q=Pszowska%20494%2C%2044-370%20Psz%C3%B3w&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
         </div>
       </div>
 
-      <div class="contact-map reveal reveal-delay-2">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2556.5!2d18.39!3d50.04!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDAyJzI0LjAiTiAxOMKwMjMnMjQuMCJF!5e0!3m2!1spl!2spl!4v1700000000000!5m2!1spl!2spl" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- RYBNIK -->
+      <div class="location-card reveal reveal-delay-2">
+        <div class="location-header">
+          <div class="location-city">RYBN<span class="accent">I</span>K</div>
+          <div class="location-tagline">Druga lokalizacja</div>
+        </div>
+
+        <div class="location-body">
+          <div class="location-info">
+            <div class="location-info-item">
+              <div class="location-info-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="location-info-text">
+                <strong>ul. Góreckiego 55</strong>
+                44-200 Rybnik
+              </div>
+            </div>
+            <div class="location-info-item">
+              <div class="location-info-icon">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="location-info-text">
+                <a href="tel:323078283">32 307 82 83</a>
+                Telefon
+              </div>
+            </div>
+          </div>
+
+          <div class="location-hours-block">
+            <div class="location-hours-title">
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              Stacja kontroli pojazdów
+            </div>
+            <div class="location-hours-row" data-day="1-5">
+              <span class="day">Poniedziałek — Piątek</span>
+              <span class="time">8:00 — 19:00</span>
+            </div>
+            <div class="location-hours-row" data-day="6">
+              <span class="day">Sobota</span>
+              <span class="time">8:00 — 13:00</span>
+            </div>
+            <div class="location-hours-row" data-day="0">
+              <span class="day">Niedziela</span>
+              <span class="time">Zamknięte</span>
+            </div>
+          </div>
+
+          <div class="location-hours-block">
+            <div class="location-hours-title">
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+              Serwis ogumienia
+            </div>
+            <div class="location-hours-row" data-day="1-5">
+              <span class="day">Poniedziałek — Piątek</span>
+              <span class="time">8:00 — 17:00</span>
+            </div>
+            <div class="location-hours-row" data-day="6">
+              <span class="day">Sobota</span>
+              <span class="time">8:00 — 13:00</span>
+            </div>
+            <div class="location-hours-row" data-day="0">
+              <span class="day">Niedziela</span>
+              <span class="time">Zamknięte</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="location-map">
+          <iframe src="https://maps.google.com/maps?q=G%C3%B3reckiego%2055%2C%2044-200%20Rybnik&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -419,9 +413,29 @@
 <!-- ====== FOOTER ====== -->
 <footer>
   <div class="container">
-    <div class="footer-logo"><img src="logo.png" alt="ELZET" style="height: 28px; width: auto; opacity: 0.9;"></div>
-    <p>Stacja Kontroli Pojazdów i Serwis Opon — Pszów od 2004 r.</p>
-    <p style="margin-top: 8px; font-size: 12px; color: #3a4a5e;">© 2024 ELZET. Wszystkie prawa zastrzeżone. NIP: 6472337566</p>
+    <div class="footer-grid">
+      <div class="footer-logo-block">
+        <img src="logo.png" alt="ELZET s.c.">
+        <p>Stacja kontroli pojazdów i serwis ogumienia. Działamy w Pszowie i Rybniku od 2004 roku.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Pszów</h4>
+        <p>ul. Pszowska 494<br>44-370 Pszów</p>
+        <a href="tel:324558648">32 455 86 48</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Rybnik</h4>
+        <p>ul. Góreckiego 55<br>44-200 Rybnik</p>
+        <a href="tel:323078283">32 307 82 83</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 ELZET s.c. — Wszystkie prawa zastrzeżone.</p>
+      <p>NIP: 6472337566 &nbsp;·&nbsp; REGON: 278257947</p>
+    </div>
   </div>
 </footer>
 
