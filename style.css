@@ -40,6 +40,19 @@ body {
   font-feature-settings: "tnum" 0, "ss01";
 }
 
+/* SAFETY: prevent SVGs from blowing up if any CSS fails */
+svg {
+  max-width: 100%;
+  max-height: 100%;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container { max-width: 1320px; margin: 0 auto; padding: 0 40px; }
 
 /* ====== ANIMATIONS ====== */
@@ -277,8 +290,14 @@ nav {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  overflow: hidden;
 }
-.hero-phone .phone-icon svg { width: 18px; height: 18px; color: white; }
+.hero-phone .phone-icon svg {
+  width: 18px;
+  height: 18px;
+  color: white;
+  display: block;
+}
 .hero-phone .phone-text {
   display: flex;
   flex-direction: column;
