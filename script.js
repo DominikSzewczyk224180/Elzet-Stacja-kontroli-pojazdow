@@ -1,4 +1,4 @@
-// Header scroll effect
+// Header scroll effect (subtle)
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 60);
@@ -28,7 +28,7 @@ function closeMobile() {
   spans[2].style.transform = '';
 }
 
-// Scroll reveal
+// Scroll reveal (subtle fade-up)
 const reveals = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -37,25 +37,24 @@ const revealObserver = new IntersectionObserver((entries) => {
       revealObserver.unobserve(e.target);
     }
   });
-}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
 reveals.forEach(el => revealObserver.observe(el));
 
-// Highlight today's hours in both location cards
-const today = new Date().getDay(); // 0 = Sunday, 1-5 = Mon-Fri, 6 = Saturday
+// Highlight today in hours rows for both locations
+const today = new Date().getDay(); // 0=Sun, 1-5=Mon-Fri, 6=Sat
 document.querySelectorAll('.location-hours-row').forEach(row => {
   const day = row.dataset.day;
-  if (day === '1-5' && today >= 1 && today <= 5) {
-    row.classList.add('today');
-  } else if (day === String(today)) {
-    row.classList.add('today');
-  }
+  if (day === '1-5' && today >= 1 && today <= 5) row.classList.add('today');
+  else if (day === String(today)) row.classList.add('today');
 });
 
-// Smooth scroll for anchor links with offset for sticky header
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target && this.getAttribute('href').length > 1) {
+// Smooth scroll with offset for sticky header
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href.length <= 1) return;
+    const target = document.querySelector(href);
+    if (target) {
       e.preventDefault();
       const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 70;
       window.scrollTo({ top: offsetTop, behavior: 'smooth' });
