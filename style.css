@@ -730,9 +730,9 @@ section { padding: 110px 0; }
 
 .showcase-grid {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  grid-template-columns: 0.85fr 1.35fr;
   align-items: center;
-  gap: 56px;
+  gap: 48px;
 }
 
 .showcase-content { color: white; }
